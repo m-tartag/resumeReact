@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
-export class Body extends Component {
+export default class Body extends Component {
   render() {
     return (
       <div>
@@ -10,5 +10,3 @@ export class Body extends Component {
     );
   }
 }
-
-export default Body;
