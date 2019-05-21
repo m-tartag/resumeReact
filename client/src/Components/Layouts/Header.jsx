@@ -17,36 +17,28 @@ export default class Header extends React.Component {
   constructor(props) {
     super(props);
 
-    //   this.toggle = this.toggle.bind(this);
-    this.state = {
-      isOpen: false,
-    };
+    this.state = {};
   }
-
-  // toggle() {
-  //   this.setState({
-  //     isOpen: !this.state.isOpen,
-  //   });
-  // }
 
   render() {
     return (
-      <div id="Centerer">
-        <Navbar id="NavCSS" expand="md">
-          <NavbarBrand href="/">CodeZone</NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
+      <div>
+        <Navbar color="light" light expand="md">
+          <NavbarBrand href="/">reactstrap</NavbarBrand>
+          <NavbarToggler />
           <Collapse navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="#">About</NavLink>
+                <NavLink href="/">About</NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
-                  Users
+                  Account
                 </DropdownToggle>
                 <DropdownMenu right>
-                  <DropdownItem>Log In</DropdownItem>
-                  <DropdownItem>New Users</DropdownItem>
+                  <DropdownItem>Login</DropdownItem>
+                  <DropdownItem divider />
+                  <DropdownItem>New User</DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
             </Nav>
