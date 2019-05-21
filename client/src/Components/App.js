@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Header, Foot, Body, Login } from './Layouts';
+import { Header, Foot, Login } from './Layouts';
 import './App.css';
 
 class App extends Component {

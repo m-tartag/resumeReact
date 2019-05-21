@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import { Footer } from 'reactstrap';
 
-export class Foot extends Component {
+export default class Foot extends Component {
   render() {
     return (
       <footer id="FootCSS" className="page-footer font-small fixed-bottom pt-4">
@@ -42,5 +42,3 @@ export class Foot extends Component {
     );
   }
 }
-
-export default Foot;
