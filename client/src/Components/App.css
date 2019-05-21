@@ -1,0 +1,25 @@
+#LoginCSS {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+  height: 100%;
+  margin-top: 100px;
+  border: solid black 2px;
+}
+
+#NavCSS {
+  margin: auto;
+  position: relative;
+  height: 80px;
+  border: solid black 2px;
+  background-color: white;
+  align-content: center;
+}
+#Centerer {
+  align-content: center;
+}
+#FootCSS {
+  border: solid black 2px;
+  background-color: #708090;
+}
