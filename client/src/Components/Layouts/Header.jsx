@@ -1,4 +1,4 @@
-import React from 'react';
+import React from './node_modules/react';
 import {
   Collapse,
   Navbar,
@@ -11,7 +11,7 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-} from 'reactstrap';
+} from './node_modules/reactstrap';
 
 export default class Header extends React.Component {
   constructor(props) {
@@ -23,8 +23,8 @@ export default class Header extends React.Component {
   render() {
     return (
       <div>
-        <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">reactstrap</NavbarBrand>
+        <Navbar id="NavCSS" light expand="md">
+          <NavbarBrand href="/">CodeBlock</NavbarBrand>
           <NavbarToggler />
           <Collapse navbar>
             <Nav className="ml-auto" navbar>
