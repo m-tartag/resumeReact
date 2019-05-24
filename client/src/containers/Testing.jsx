@@ -1,13 +1,12 @@
 import React from 'react';
 
-const Testing = () => (
-  <div>
-    <ul>
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-    </ul>
-  </div>
-);
-
-export default Testing;
+export default function ContactCare() {
+  return (
+    <div className="contact-card">
+      <img src="http://placekitten.com/300/200" alt="Kitten" />
+      <h3>Mr. Baldy</h3>
+      <p>Phone: 555-5555</p>
+      <p>Baldy@gmail.com</p>
+    </div>
+  );
+}
