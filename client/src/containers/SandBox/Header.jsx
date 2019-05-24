@@ -1,4 +1,4 @@
-import React from './node_modules/react';
+import React from 'react';
 import {
   Collapse,
   Navbar,
@@ -11,7 +11,7 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-} from './node_modules/reactstrap';
+} from 'reactstrap';
 
 export default class Header extends React.Component {
   constructor(props) {
