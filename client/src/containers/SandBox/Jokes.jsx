@@ -9,3 +9,13 @@ export default function Jokes(props) {
     </div>
   );
 }
+
+// const Testing = () => (
+//     <div className="container">
+//       <Jokes data={{ question: 'Whats up?', answer: 'The sky.' }} />
+//       <Jokes data={{ question: 'Bad Joke.', answer: 'Agreed.' }} />
+//       <Jokes data={{ question: 'Wow.', answer: 'Low Point.' }} />
+//     </div>
+//   );
+
+//   export default Testing;
