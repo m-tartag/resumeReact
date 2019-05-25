@@ -1,5 +1,5 @@
 import React from 'react';
-import {} from 'reactstrap';
+import { Button } from 'reactstrap';
 
 export default class Body extends React.Component {
   constructor(props) {
@@ -19,8 +19,10 @@ export default class Body extends React.Component {
     return (
       <div>
         <div id="BodyCSS" className="jumbotron">
-          <h1>Hello</h1>
-          <h4>Get started..</h4>
+          <h2>Open your mind.</h2>
+          <Button lg color="warning">
+            Create Account
+          </Button>
         </div>
       </div>
     );

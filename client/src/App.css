@@ -2,6 +2,9 @@
 font-family: 'Concert One', cursive;
 font-family: 'Kalam', cursive;
 font-family: 'Pathway Gothic One', sans-serif; */
+/* * {
+  background-color: black;
+} */
 
 #NavbarBrand {
   font-family: 'Concert One', cursive;
@@ -12,7 +15,7 @@ font-family: 'Pathway Gothic One', sans-serif; */
 #NavbarLinks {
   font-family: 'Concert One', cursive;
 }
-#LoginCSS {
+/* #LoginCSS {
   width: 100%;
   max-width: 330px;
   padding: 15px;
@@ -20,19 +23,27 @@ font-family: 'Pathway Gothic One', sans-serif; */
   height: 100%;
   margin-top: 100px;
   border: solid black 2px;
-}
+} */
 
 #NavCSS {
   margin: auto;
-  position: relative;
   height: 80px;
   border: solid black 1px;
 }
 #FootCSS {
+  height: 80px;
   background-color: #343a40;
-  color: grey;
-  height: 70px;
+  margin: auto;
+  border: solid black 1px;
+  align-content: center;
+  text-align: center;
+  color: white;
 }
 #BodyCSS {
-  height: 100%;
+  margin: auto;
+  border: solid black 1px;
+  font-family: 'Pathway Gothic One', sans-serif;
+  text-align: center;
+  height: 400px;
+  padding-top: 150px;
 }
