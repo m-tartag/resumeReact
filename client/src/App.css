@@ -1,3 +1,17 @@
+/* font-family: 'Russo One', sans-serif;
+font-family: 'Concert One', cursive;
+font-family: 'Kalam', cursive;
+font-family: 'Pathway Gothic One', sans-serif; */
+
+#NavbarBrand {
+  font-family: 'Concert One', cursive;
+  font-family: 'Russo One', sans-serif;
+  color: white;
+  font-size: 25px;
+}
+#NavbarLinks {
+  font-family: 'Concert One', cursive;
+}
 #LoginCSS {
   width: 100%;
   max-width: 330px;
@@ -12,16 +26,13 @@
   margin: auto;
   position: relative;
   height: 80px;
-  border: solid black 2px;
-  background-color: white;
-  align-content: center;
-  color: black;
-  background-color: #708090;
-}
-#Centerer {
-  align-content: center;
+  border: solid black 1px;
 }
 #FootCSS {
-  border: solid black 2px;
-  background-color: #708090;
+  background-color: #343a40;
+  color: grey;
+  height: 70px;
+}
+#BodyCSS {
+  height: 100%;
 }
