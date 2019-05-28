@@ -6,7 +6,7 @@ export default class Body extends React.Component {
     super(props);
 
     // this.toggle = this.toggle.bind(this);
-    this.state = {};
+    this.state = { styleOne: {}, styleTwo: {} };
   }
 
   //   toggle() {
@@ -19,10 +19,10 @@ export default class Body extends React.Component {
     return (
       <div>
         <div id="BodyCSS" className="jumbotron">
-          <h2>Open your mind.</h2>
+          {/* <h2>Open your mind.</h2>
           <Button lg color="warning">
             Create Account
-          </Button>
+          </Button> */}
         </div>
       </div>
     );
