@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from 'reactstrap';
+import { Cards } from '../Secondary';
 
 export default class Body extends React.Component {
   constructor(props) {
@@ -23,6 +24,8 @@ export default class Body extends React.Component {
           <Button lg color="warning">
             Create Account
           </Button> */}
+
+          <Cards />
         </div>
       </div>
     );
