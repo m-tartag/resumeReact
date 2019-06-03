@@ -12,7 +12,6 @@ class App extends Component {
       <div className="">
         <Navigation />
         <Body />
-        <Cards />
         <Foot />
       </div>
     );

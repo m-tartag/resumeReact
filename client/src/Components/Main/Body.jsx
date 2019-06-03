@@ -1,31 +1,39 @@
 import React from 'react';
 import { Button } from 'reactstrap';
-import { Cards } from '../Secondary';
 
 export default class Body extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      visibility: true,
+    };
 
-    // this.toggle = this.toggle.bind(this);
-    this.state = { styleOne: {}, styleTwo: {} };
+    this.toggleVisibility = this.toggleVisibility.bind(this);
   }
 
-  //   toggle() {
-  //     this.setState({
-
-  //     });
-  //   }
+  toggleVisibility() {
+    this.setState({ visibility: !this.state.visibility });
+  }
 
   render() {
+    if (this.state.visibility) {
+      return (
+        <div>
+          <div id="BodyCSS" className="jumbotron">
+            <h2>Open your mind.</h2>
+            <Button onClick={this.toggleVisibility} lg color="warning">
+              Create Account
+            </Button>
+          </div>
+        </div>
+      );
+    }
     return (
       <div>
         <div id="BodyCSS" className="jumbotron">
-          {/* <h2>Open your mind.</h2>
-          <Button lg color="warning">
+          <Button onClick={this.toggleVisibility} lg color="warning">
             Create Account
-          </Button> */}
-
-          <Cards />
+          </Button>
         </div>
       </div>
     );

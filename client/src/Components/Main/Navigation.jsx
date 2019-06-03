@@ -29,7 +29,7 @@ export default class Navigation extends React.Component {
       <div>
         <Navbar id="NavCSS" color="dark" light expand="md">
           <NavbarBrand id="NavbarBrand" href="/">
-            Tech Shop
+            Skynet
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
