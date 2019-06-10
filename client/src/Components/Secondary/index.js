@@ -1,3 +1,3 @@
-import Cards from './Cards';
+import SearchBar from './SearchBar';
 
-export { Cards };
+export { SearchBar };

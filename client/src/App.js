@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTwitter } from '@fortawesome/free-solid-svg-icons';
+
 import { Navigation, Body, Foot } from './components/Main';
-import { Cards } from './components/Secondary';
+// import { SearchBar } from './components/Secondary';
+import { Login, NewCounter } from './containers/SandBox';
 import './App.css';
 
 class App extends Component {
@@ -12,7 +11,9 @@ class App extends Component {
       <div className="">
         <Navigation />
         <Body />
-        <Foot />
+        <NewCounter />
+        {/* <Foot /> */}
+        <Login />
       </div>
     );
   }

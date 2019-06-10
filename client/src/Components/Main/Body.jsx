@@ -20,7 +20,7 @@ export default class Body extends React.Component {
       return (
         <div>
           <div id="BodyCSS" className="jumbotron">
-            <h2>Open your mind.</h2>
+            <h2>Hide Me.</h2>
             <Button onClick={this.toggleVisibility} lg color="warning">
               Create Account
             </Button>
