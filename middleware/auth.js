@@ -8,16 +8,14 @@ const config = require('config');
 // this middleware is complete... then next middleware can start
 
 module.exports = function(req, res, next) {
-  // Get token from header
+  // Check token from header
   const token = req.header('x-auth-token');
 
-  // Check if NO token
+  // If no token
 
   if (!token) {
     return res.status(401).json({ msg: 'No token, Authorization Denied' });
   }
-
-  // Verify Token (Decode)
   try {
     const decoded = jwt.verify(token, config.get('jwtToken'));
     req.user = decoded.user;

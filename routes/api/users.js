@@ -15,7 +15,7 @@ const User = require('../../models/User');
 router.post(
   '/',
 
-  // Express-Validator
+  // 1: Express-Validator (Check to make sure input is uniform)
   [
     check('name', 'Name is required')
       .not()
@@ -25,35 +25,39 @@ router.post(
       min: 6,
     }),
   ],
+
   // Use Async/Await here - Important
+
   async (req, res) => {
     const errors = validationResult(req);
-    // Fancy Error Catch
+
+    // Just a fancy error catch - sends back error in json format
+
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
     }
+    // 2: Check to see if User Already Exists
 
-    // Destructure {req.body}
     const { name, email, password } = req.body;
     console.log(req.body);
-
-    // NEED Try/Catch Using Async/Await
     try {
-      // See if user ALREADY exists
       let user = await User.findOne({ email });
       if (user) {
         res.status(400).json({ errors: [{ msg: 'User already exists' }] });
       }
 
-      // Gravatar middleware
+      // 3. Gravatar middleware
+
       const avatar = gravatar.url(email, {
         s: '200',
         r: 'pg',
         d: 'mm',
       });
 
+      // 4. Create New User
+
       // This creates a new instance of the user.. it doesnt SAVE IT YET
-      // Must call User.save to save.. must ENCRYPT PASSWORD BEFORE SAVE TO DB..
+      // Must call User.save to save.. but first, must encrypt password
       user = new User({
         name,
         email,
@@ -61,21 +65,25 @@ router.post(
         password,
       });
 
-      // --------------------------
-      // Encrypt password Middleware
-      //----------------------------
-      // Pretty much boilerplate -- Check Documentation
+      // 5. Encrypt password Middleware
+
+      // Pretty much boilerplate
+
+      // If you’re wondering what the 10(that’s used for hashing) is,
+      // then that’s the work factor or the number of rounds the data
+      // is processed for.More rounds leads to more secured hash but
+      // slower / expensive process.
       const salt = await bcrypt.genSalt(10);
 
       user.password = await bcrypt.hash(password, salt);
 
-      // And Finally SAVE USER TO DB
+      // 6. Now Finally SAVE USER TO DB
       // ***************************
       await user.save();
 
-      // Now Lastly Return {jsonwebtoken} to User
-      // ========================================
-
+      // 7. Lastly... Return {jsonwebtoken} to User
+      // this makes auth possible
+      b;
       const payload = {
         user: {
           id: user.id,
