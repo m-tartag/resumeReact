@@ -83,7 +83,7 @@ router.post(
 
       // 7. Lastly... Return {jsonwebtoken} to User
       // this makes auth possible
-      b;
+
       const payload = {
         user: {
           id: user.id,
