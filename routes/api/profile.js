@@ -1,6 +1,6 @@
 const express = require('express');
 const auth = require('../../middleware/auth');
-const User = require('../../models/User');
+const { check, validationResult } = require('express-validator');
 const Profile = require('../../models/Profile');
 
 const router = express.Router();
@@ -24,5 +24,30 @@ router.get('/me', auth, async (req, res) => {
     res.status(500).send('Server Error');
   }
 });
+
+// @route     POST api/profile/
+// @desc      Create or Update User Profile
+// @access    Private
+
+router.post(
+  '/',
+  [
+    auth,
+    [
+      check('status', 'Status is required.')
+        .not()
+        .isEmpty(),
+      check('skills', 'Skills is required.')
+        .not()
+        .isEmpty(),
+    ],
+  ],
+  async (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.stsatus(400).json({ errors: errors.array() });
+    }
+  }
+);
 
 module.exports = router;

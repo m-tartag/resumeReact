@@ -10,7 +10,6 @@ const auth = require('../../middleware/auth');
 const User = require('../../models/User');
 
 // @route     GET api/auth
-
 // @desc      Test Route
 // @access    Pubic
 router.get('/', auth, async (req, res) => {
@@ -28,7 +27,9 @@ router.get('/', auth, async (req, res) => {
 // @access    Public
 router.post(
   '/',
-  // Express-Validator
+
+  // 1. Express-Validator
+
   [
     check('email', 'Invalid E-mail').isEmail(),
     check('password', 'Password is required').exists(),
@@ -36,20 +37,20 @@ router.post(
   // Use Async/Await here - Important
   async (req, res) => {
     const errors = validationResult(req);
-    // Fancy Error Catch
+
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
     }
+    // 2. Check if User Aready Exists
 
     const { email, password } = req.body;
 
-    // Does User exist?
     try {
       const user = await User.findOne({ email });
       if (!user) {
         res.status(400).json({ errors: [{ msg: 'Invalid Credentials' }] });
       }
-      // Now need to MATCH user
+      // 3. If User Exists
 
       const isMatch = await bcrypt.compare(password, user.password);
 
@@ -59,8 +60,7 @@ router.post(
           .json({ errors: [{ msg: 'Invalid Credentials' }] });
       }
 
-      // Payload / Webtoken
-      // ========================================
+      // 4. Payload / Webtoken
 
       const payload = {
         user: {
