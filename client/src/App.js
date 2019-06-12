@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import { Navigation, Body, Foot } from './components/Main';
 // import { SearchBar } from './components/Secondary';
-import { Login, NewCounter } from './containers/SandBox';
 import './App.css';
 
 class App extends Component {
@@ -11,9 +10,7 @@ class App extends Component {
       <div className="">
         <Navigation />
         <Body />
-        <NewCounter />
-        {/* <Foot /> */}
-        <Login />
+        <Foot />
       </div>
     );
   }
