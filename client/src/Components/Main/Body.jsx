@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import { Button } from 'reactstrap';
 
@@ -20,11 +21,11 @@ export default class Body extends React.Component {
             <h2>{this.state.title}</h2>
             <h1 style={{ fontSize: '50px' }}>Buy/Sell Used Computer Parts</h1>
             <p />
-            <Button outline color="success">
+            <Button tag={Link} to="/Register" outline color="success">
               New User
             </Button>
             &nbsp;&nbsp;&nbsp;&nbsp;
-            <Button outline color="warning">
+            <Button tag={Link} to="/Login" outline color="warning">
               Login
             </Button>
           </div>

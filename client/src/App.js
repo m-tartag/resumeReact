@@ -16,14 +16,14 @@ const App = () => (
     <Fragment>
       <Navigation />
       <Route exact path="/" component={Body} />
-      <section className="container">
-        <Switch>
-          <Route exact path="/register" component={Register} />
-          <Route exact path="/login" component={Login} />
-          <Route exact path="/buy" component={Buy} />
-          <Route exact path="/sell" component={Sell} />
-        </Switch>
-      </section>
+
+      <Switch>
+        <Route exact path="/register" component={Register} />
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/buy" component={Buy} />
+        <Route exact path="/sell" component={Sell} />
+      </Switch>
+
       <Foot />
     </Fragment>
   </Router>

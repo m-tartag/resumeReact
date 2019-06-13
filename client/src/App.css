@@ -23,12 +23,15 @@ font-family: 'Pathway Gothic One', sans-serif; */
   margin: auto;
   font-family: 'Pathway Gothic One', sans-serif;
   color: lightgreen;
+  z-index: 1;
 }
 #FootCSS {
   height: 70px;
   background-color: #343a40;
   margin: auto;
   color: white;
+  z-index: 0;
+  position: relative;
 }
 #BodyCSS {
   margin: auto;
@@ -37,6 +40,24 @@ font-family: 'Pathway Gothic One', sans-serif; */
   text-align: center;
   height: 1000px;
   padding-top: 150px;
+}
+#RegisterCSS {
+  margin: auto;
+  margin-top: -150px;
+  font-family: 'Pathway Gothic One', sans-serif;
+  text-align: center;
+  height: 1000px;
+  padding-top: 150px;
+  margin-bottom: -120px;
+}
+#LoginCSS {
+  margin: auto;
+  margin-top: -150px;
+  font-family: 'Pathway Gothic One', sans-serif;
+  text-align: center;
+  height: 1000px;
+  padding-top: 150px;
+  margin-bottom: -120px;
 }
 
 /* ===== Image ====== */
@@ -85,4 +106,76 @@ html {
   padding: 20px;
   text-align: center;
   height: 250px;
+}
+
+.bg-image2 {
+  /* The image used */
+  background-image: url('./assets/Keyboard.jpg');
+
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+
+  /* Full height */
+  height: 90%;
+  margin-top: -80px;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg-image3 {
+  /* The image used */
+  background-image: url('./assets/Old.jpg');
+
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+
+  /* Full height */
+  height: 90%;
+  margin-top: 0;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg-text2 {
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.77); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 50%;
+  padding: 20px;
+  text-align: center;
+  height: 310px;
+  width: 400px;
+}
+.bg-text3 {
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.6); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 50%;
+  padding: 20px;
+  text-align: center;
+  height: 300px;
+  width: 450px;
+}
+
+#forSale {
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 80px;
 }

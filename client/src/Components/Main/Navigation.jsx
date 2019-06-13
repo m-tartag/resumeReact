@@ -9,7 +9,7 @@ import {
   NavLink,
 } from 'reactstrap';
 
-export default class Example extends React.Component {
+export default class Navigation extends React.Component {
   constructor(props) {
     super(props);
 
@@ -43,11 +43,6 @@ export default class Example extends React.Component {
               <NavItem>
                 <NavLink id="NavbarLinks" href="/Sell/">
                   Sell
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink id="NavbarLinks" href="/Login/">
-                  Users
                 </NavLink>
               </NavItem>
             </Nav>
