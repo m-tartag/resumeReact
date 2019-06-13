@@ -5,6 +5,8 @@ import {
   NavbarToggler,
   NavbarBrand,
   Nav,
+  NavItem,
+  NavLink,
   Button,
 } from 'reactstrap';
 
@@ -29,20 +31,23 @@ export default class Navigation extends React.Component {
       <div>
         <Navbar id="NavCSS" color="dark" light expand="md">
           <NavbarBrand id="NavbarBrand" href="/">
-            Skynet
+            CompuShop
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav id="NavbarLinks" className="ml-auto" navbar>
-              {/* <NavItem>
-                <NavLink href="/components/">Home</NavLink>
+              <NavItem>
+                <NavLink id="links" href="/components/">
+                  Computers
+                </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/components/">News</NavLink>
+                <NavLink href="/components/">Parts</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="/components/">About</NavLink>
-              </NavItem> */}
+              </NavItem>
+
               <Button color="success">Login</Button>
             </Nav>
           </Collapse>
