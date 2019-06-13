@@ -7,9 +7,7 @@ export default class Foot extends Component {
       <footer id="FootCSS">
         <Row>
           <Col xs="6" sm="4" />
-          <Col xs="6" sm="4">
-            <p>___</p>
-          </Col>
+          <Col xs="6" sm="4" />
           <Col sm="4" />
         </Row>
       </footer>

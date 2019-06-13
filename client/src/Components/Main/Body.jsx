@@ -1,11 +1,12 @@
 import React from 'react';
+
 import { Button } from 'reactstrap';
 
 export default class Body extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      intro: `Welcome to CompuShop. Buy/Sell Used PC Parts.`,
+      title: 'Welcome to CompuShop',
     };
   }
 
@@ -13,12 +14,20 @@ export default class Body extends React.Component {
     return (
       <div>
         <div id="BodyCSS" className="jumbotron">
-          <h2>{this.state.intro}</h2>
-          <Button lg outline color="success">
-            Log-In
-          </Button>
-          {''}
-          <Button lg outline color="warning" />
+          <div className="bg-image" />
+
+          <div className="bg-text">
+            <h2>{this.state.title}</h2>
+            <h1 style={{ fontSize: '50px' }}>Buy/Sell Used Computer Parts</h1>
+            <p />
+            <Button outline color="success">
+              New User
+            </Button>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <Button outline color="warning">
+              Login
+            </Button>
+          </div>
         </div>
       </div>
     );
