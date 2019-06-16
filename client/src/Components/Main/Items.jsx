@@ -14,7 +14,7 @@ const Items = props => (
     <Card
       style={{
         border: 'solid 2px',
-        margin: '10px',
+        margin: '20px',
         backgroundColor: 'lightgrey',
       }}
     >
