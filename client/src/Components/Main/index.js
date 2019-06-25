@@ -6,5 +6,18 @@ import Login from './Login';
 import Buy from './Buy';
 import Sell from './Sell';
 import Items from './Items';
+import Header from './Header';
+import Landing from './Landing';
 
-export { Body, Navigation, Foot, Register, Login, Buy, Sell, Items };
+export {
+  Body,
+  Navigation,
+  Foot,
+  Register,
+  Login,
+  Buy,
+  Sell,
+  Items,
+  Header,
+  Landing,
+};

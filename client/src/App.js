@@ -8,23 +8,22 @@ import {
   Register,
   Buy,
   Sell,
+  Header,
+  Landing,
 } from './components/Main';
 import './App.css';
 
 const App = () => (
   <Router>
     <Fragment>
-      <Navigation />
-      <Route exact path="/" component={Body} />
-
+      <Header />
+      <Route exact path="/" component={Landing} />
       <Switch>
         <Route exact path="/register" component={Register} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/buy" component={Buy} />
         <Route exact path="/sell" component={Sell} />
       </Switch>
-
-      <Foot />
     </Fragment>
   </Router>
 );
