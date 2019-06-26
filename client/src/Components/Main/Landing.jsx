@@ -3,7 +3,7 @@ import { Jumbotron, Button } from 'reactstrap';
 
 const Example = props => (
   <div>
-    <Jumbotron>
+    <Jumbotron style={{ height: '800px' }} id="Landing">
       <h1 className="display-4">Welcome</h1>
       <p className="lead">
         Resume 2.0 is a revolutionary new way to showcase hard work with the
