@@ -8,6 +8,7 @@ import Sell from './Sell';
 import Items from './Items';
 import Header from './Header';
 import Landing from './Landing';
+import Practice from './Practice';
 
 export {
   Body,
@@ -20,4 +21,5 @@ export {
   Items,
   Header,
   Landing,
+  Practice,
 };

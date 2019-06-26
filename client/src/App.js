@@ -10,6 +10,7 @@ import {
   Sell,
   Header,
   Landing,
+  Practice,
 } from './components/Main';
 import './App.css';
 
@@ -18,6 +19,7 @@ const App = () => (
     <Fragment>
       <Header />
       <Route exact path="/" component={Landing} />
+      <Practice />
       <Switch>
         <Route exact path="/register" component={Register} />
         <Route exact path="/login" component={Login} />
